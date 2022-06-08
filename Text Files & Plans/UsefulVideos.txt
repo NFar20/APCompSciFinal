@@ -1,0 +1,8 @@
+https://www.youtube.com/watch?v=cNh-jFcCGKU
+Draggable element in html using js
+
+flex box
+
+https://www.w3.org/Style/Examples/007/fonts.en.html
+https://www.w3schools.com/css/css_text.asp
+These are links for text customization

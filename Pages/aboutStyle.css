@@ -1,0 +1,77 @@
+html, body { 
+  height: 100%;
+  width: 100%;
+  margin: 0; padding: 0;
+}
+
+.aboutHomeLink {
+  font-family: 'Roboto Slab', serif;
+  font-size: 15px;
+}
+.aboutHomeLinkLogo {
+  height: 130px; width: 130px;
+}
+
+.aboutHead {
+  width: 100%;
+  font-family: 'Roboto Slab', serif;
+}
+
+.aboutBody {
+  font-family: 'Roboto Slab', serif;
+}
+
+.aboutBodyBox {
+  width: 80%; height: 580px;
+  position: relative;
+  left: 10%;
+}
+
+.aboutBottom {
+  position: fixed;
+  bottom: 0px;
+  width: 100%; height: 175px;
+  background-image: linear-gradient(to top right, gray, navy);
+}
+
+.aboutBottom1 {
+  width: 33.3%;
+  bottom: 10px;
+}
+
+.aboutBottom2 {
+  width: 33.3%;
+  position: fixed; bottom: 10px; left: 33.3%;
+}
+
+.aboutBottom3 {
+  width: 33.3%;
+  position: fixed; left: 66.7%; bottom: 10px;
+}
+
+.aboutLinks {
+  text-align: center;
+  font-size: 15px;
+  color: lightgray;
+  text-decoration: underline;
+  font-family: Courier;
+}
+
+/* Attempted working scrollbar*/
+::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+  right: 35%;
+}
+
+::-webkit-scrollbar-track {
+  background-image: linear-gradient(to bottom, #ba2323, #d94c4c, #08298a);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #505752;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: khaki;
+}

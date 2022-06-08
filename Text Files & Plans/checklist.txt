@@ -1,0 +1,52 @@
+Place a ( ✔ ) Checkmark when complete
+Nick and Danny: 
+ - Create Category in Ringtone Page ✔
+ - Create Length, Downloads, and Youtube Visuals in Ringtone Page ✔
+ - Create Lines & Dividers ✔
+ - Create Recommended Spot in Ringtone Page ✔
+ - Lock Header in Place ✔
+ - Place HTMl for Ads 
+ - Scale Site to Devices (mobile)
+ - Create and Integrate Error Messages
+ - Create Openning Animation
+ - Intigrate Instructions
+
+David and Alex: 
+ - Link Backend Code to the rest of the Ringtone Page ✔
+ - Fix Limit Issue ✔
+ - Fix Randomizing Text/Ring tones issue ✔
+ - Randomize Ringtoned Objects ✔
+ - Speed Up Ringtone Data Obtainment ✔
+ - Fix Duplicate Reclick Glitch ✔
+ - Fix Ringtone/Texttone Confusion on Reclick ✔
+ - Fix Category Glitch ✔
+ - Add Tone Name to Ringtone Objects
+ - Fix Popular
+ - Fix Recommended
+ - Disable HTMl Page on Popup Open (Enable on Popup Close)
+ - Load More Ringtones on Scroll (Pagination)
+ - Change Firebase Downloads variable on Download Click ✔
+ - Change Recommended From Text to Logo Image
+ - Add who suggested the Ringtone at bottom left (where recommendation is supposed to be)
+ - Ringtone Sharing
+ - Link Ads to HTML Code
+ - Link Openning Animation to Ringtones Onload
+ - Load Every Category during loading animation
+ - Create Loading Bar
+ - End Loader on Ringtone Load
+ - Code Testing and Error Solving
+ - Fine Tuning
+
+Nick K:
+ - Create Play & Pause Buttons
+ - Finish Upper Header Icons
+ - Create Youtube, Downloads, Length, and Recommended Icons
+ - Create Logo
+ - Design Creator Icons
+ - Create Instructions
+
+Richi:
+ - Complete List of Ringtones
+ - Think of Your Own Ringtones
+ - Add all of them to Firebase
+

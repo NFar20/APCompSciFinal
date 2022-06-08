@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<!-- Ya I found it https://www.w3schools.com/howto/howto_css_modals.asp we can figure that out later. rn we need to figure out how to access each of the ringtones as a button-->
+<!-- ** Dont forget to comment the code that you write to help us read it easier ** -->
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ringtone Catalog</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <style>
+    div.scroll {
+      overflow-x: auto;
+      overflow-y: auto;
+      text-align:justify;
+    }
+  </style>
+   
+  <!-- Necessary for Firebase Server!! Do not Delete!! -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  
+</head>
+<body class = "sansScrollBar">
+  <!-- Place Scripts Here -->
+  
+  <script src = "configuration.js" type = "module"></script> <!-- Sets up Firebase -->
+  <script src = "script.js"></script> <!-- Houses all Front End website Functions -->
+  <script src = "firebase.js"></script> <!-- Houses all of the Firebase Functions -->
+
+<!-- Please see the PDF in the Files. Plan.PDF!!! I basically drew up some ideas that should work. If you have any question just text the chat -->
+
+  <div id = "popup" class = "popup">
+    <div class = "popupCategory"><img src ="" alt="Category" class = "withinPopupImage"></img></div>
+    <center><h1 class = "popupTitle">Song Title</h1></center>
+    <div class="popupText">
+      <p1 class = "popupInfo"><span class = "song_info">Song<span class = "parenthetical">(</span>s<span class = "parenthetical">)</span>: </span><span class = "song_data">  </span></p1>
+      <p1 class = "popupInfo"><span class = "song_info">Album: </span><span class = "song_data"></span></p1>
+      <p1 class = "popupInfo"><span class = "song_info">Artist<span class = "parenthetical">(</span>s<span class = "parenthetical">)</span>: </span><span class = "song_data"></span></p1>
+      <p1 class = "popupInfo"><span class = "song_info">Studio: </span><span class = "song_data"></span></p1>
+      <div class = "navigableInfo"> <!-- Other Info -->
+        <div class = "popupObject"> <!-- Downloads -->
+          <img src = "Images/download.png" class = "withinObjectButton" id = "downloadsButton"></img><p class = "withinObjectPara" id = "downloadsPara"></p>
+        </div>
+        <div class = "popupObject"> <!-- Length -->
+          <img src = "Images/clock.png" class = "withinObjectButton" id = "lengthButton"></img><p class = "withinObjectPara" id = "lengthPara"></p>
+        </div>
+        <div class = "popupObject"> <!-- Youtube -->
+          <img src = "Images/youtubelogo.png" alt="YouTube" class = "withinObjectButton" id = "youtubeButton">
+        </div>
+      </div>
+      <!-- Recommendation -->
+      <div class = "recommendation">
+        <img src = "Images/good-choice.png" class = "recommendation_icon">
+        <h3 class = "who_recommended"></h3> <!-- This will be a different image when Nick K makes the Creator Icons -->
+      </div>
+    </div>
+    <div class = "ringtonePlayDiv">
+      <img class = "ringtonePlaying"> <!-- You only need one img tag, we can change the image w/ JS -->
+      <img class = "ringtoneStopped">
+      <img class = "ringtoneCover">
+      <canvas class = "progressBar" id = "progressBar"></canvas>
+      <canvas class = "loader" id = "loader"></canvas>
+      <canvas class = "ticks" id = "ticks"></canvas>
+      <button class = "playRingtone"></button>
+    </div>
+    <a id = "ringtoneDownload" href = "./Plan.pdf" download = "plan.pdf"><button id = "popupButton" class = "popupButton">Download</button></a>
+    <button class = "x_button" id = "closeButton">X</button>
+  </div>
+
+
+  <div class="topBar">
+    
+    <!-- i didnt put anything in for the image for the logo, the popular, and the recommended so we can add them after nick finishes the logos, I just added alts for now-->
+
+    <img src = "./Images/placeholderLogo.png" alt = "logo" class = "logo_image">
+
+    <div class = "buttons">
+      <button class = "nav_button" id = "recommended_button"><img src = "./Images/placeholderRecommended.jpg" alt = "recommended" class = "within_button_image"></button>
+
+      <button class = "nav_button" id = "films_button"><img src = "Images/Movie.jpg" alt = "movie" class = "within_button_image"></button>
+      
+      <button class = "nav_button" id = "songs_button"><img src ="Images/mic.png" class = "within_button_image"></button>
+      
+      <button class = "nav_button" id = "popular_button"><img src = "./Images/placeholderPopular.jpg" alt = "popular" class = "within_button_image" id = "img"></button>
+      
+      <button id = "memes_button" class = "nav_button"><img src = "Images/Memes.jpg" class = "within_button_image"></button>
+  
+      <button class = "nav_button" id = "about_button" onclick = "window.location.href='./Pages/about.html';"><img src = "./Images/about.jpg" alt = "about" class = "within_button_image"></button>
+    </div>
+    
+      <!-- These will be created in Javascript automatically when the ringtones are retrieved from the Firebase Servers -->
+
+  </div>
+</div>
+  <!-- Div to hold loaded ringtones -->
+  <div class = "body">
+    <div class = "ringtone_housing">
+      <div class = "inner_ringtone_housing"></div> <!-- The place where all of the ringtones will be -->
+    </div>
+    <div class = "texttone_housing">
+      <div class = "inner_texttone_housing"></div> <!-- The place where all of the ringtones will be -->
+    </div>
+    
+    <div class = "horizontalLineObjects">
+      <div class = "horizontalLine"></div>
+      <div class = "ringtoneWordsDiv">
+        <center><h1 class = "ringtoneWords">Ringtones</h1></center>
+      </div>
+      <div class = "texttoneWordsDiv">
+        <center><h1 class = "texttoneWords">Texttones</h1></center>
+      </div>
+    </div>
+    
+    <div class = "verticalLineObjects">
+      <div class="designedJoiner" id="designedJoiner"></div> 
+      <div class = "centerLine" id="centerLine"></div>
+    </div>
+  </div>
+  <!-- the pictures are just currently placeholders until nick makes the real ones -->
+</body>
+</html>

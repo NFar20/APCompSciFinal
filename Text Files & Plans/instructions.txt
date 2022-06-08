@@ -1,0 +1,19 @@
+*This is a rough draft for the instruction page*
+*I was thinking of adding a button that opens an instruction page in a new tab on the popups*
+Made by Nick F.
+Feel free to add anything you want to this
+
+How to Get the Ringtone on Your Phone:
+1. Download the ringtone/text tone onto your PC/Mac with the download button (Make sure you are using Google Chrome)
+2. Plug your phone into your computer with the charging cable or any cable
+3. 
+
+
+
+
+<a href="./instructions.html" target="_blank"><button id="instructions" class="instructions">How to Use</button></a>
+
+
+I was also thinking of adding a Google Form where people can suggest ringtones to add.
+This is the link to a first draft I made: bit.ly/tonesuggest
+There is also a QR code that we can use
