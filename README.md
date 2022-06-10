@@ -1,6 +1,6 @@
 # APCompSciFinal: Custom Ringtone Website
 
-Website URL: https://ringtone-creator.richardddd.repl.co/
+Website URL: https://bit.ly/CustomTones
 
 What we would add if we had more time:
   - ads (Google Adsense)
